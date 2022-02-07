@@ -4,7 +4,7 @@ from django.db import models
 class TODO(models.Model):
     name = models.CharField(max_length=100)
     time = models.CharField(max_length=30)
-    checking = models.BinaryField(editable=False)
+    made = models.BooleanField(default=False)
     today = models.ForeignKey('Day', on_delete=models.CASCADE)
 
     def __str__(self):
