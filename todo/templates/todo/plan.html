@@ -1,0 +1,9 @@
+{% extends 'todo/index.htmL' %}
+{% block content %}
+<h3>{{plan.name}}</h3>
+{% for i in concrete_plan1 %}
+    <li>{{i.name}}</li>
+    <li>{{i.time}}</li>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'todo/index.htmL' %}
+{% block content %}
+{% for i in days_of_the_week %}
+        <h3><a href='{% url "concrete_plan" i.id %}'>{{i.name}}</a></h3>
+
+{% endfor %}
+{% endblock %}
